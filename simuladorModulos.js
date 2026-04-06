@@ -32,13 +32,5 @@ function sistema(usuario, senha) {
     return gerarMensagem(perfil);
 }
 
-// Testes de integração
-test("Fluxo completo com sucesso", () => {
-    const resultado = sistema("admin", "123");
-    expect(resultado).toBe("Bem-vindo, Administrador. Perfil: Administrador do sistema");
-});
-
-test("Fluxo completo com falha", () => {
-    const resultado = sistema("user", "123");
-    expect(resultado).toBe("Acesso não autorizado");
-});
+// export default sistema;
+module.exports = sistema;
